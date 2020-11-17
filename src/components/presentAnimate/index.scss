@@ -1,0 +1,79 @@
+.presentAnimateContainer {
+  position: fixed;
+  left: 0px;
+  height: 32px;
+  max-height: 32px;
+  bottom: 44vh;
+  @media screen and (min-width: 750px) {
+    left: 50%;
+    transform: translateX(-374px);
+  }
+  .presentAnimate {
+    height: 100%;
+    position: relative;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 0px 100px 100px 0px;
+    padding: 4px 74px 4px 7px;
+    color: #363636;
+    align-items: center;
+    font-size: 14px;
+    transition: all .3s;
+    .userName {
+      color: #EB261A;
+      margin-right: 4px;
+    }
+    .presentImg {
+      position: absolute;
+      right: 14px;
+      transform: translateY(-10px);
+      width: 48px;
+      height: 48px;
+      margin-left: 30px;
+    }
+  }
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  20% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  80% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.animate__fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+}
